@@ -16,3 +16,15 @@ setInterval(() => {
 
   setTimeout(() => heart.remove(), 4000);
 }, 600);
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+btn.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    btn.innerText = "🔈 Music on";
+  } else {
+    music.pause();
+    btn.innerText = "🔊 Play music";
+  }
+});
